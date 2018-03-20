@@ -1,5 +1,6 @@
 class SignupsController < ApplicationController
 
+before_action :authorize
 
 	def new
 
