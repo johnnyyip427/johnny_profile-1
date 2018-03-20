@@ -2,7 +2,16 @@ class SignupsController < ApplicationController
 
 
 	def new
-		@signup = Signup.new
+
 	end
+
+	def about
+
+	end
+
+	def show
+	
+	end
+
 
 end
