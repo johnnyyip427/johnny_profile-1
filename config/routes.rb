@@ -5,17 +5,20 @@ Rails.application.routes.draw do
  		get 'signup' => 'users#new'
  		resources :users
 
- 	
  
-  	
-
-
   	get  'login' => 'sessions#new'
 
 		post 'login' => 'sessions#create'
 
 		get 'logout' => 'sessions#destroy'
 		
+
+		get 'messages' => 'messages#index'
+
+		get 'messages/new' => 'messages#new'
+
+		post 'messages' => 'messages#create'
+
 
   	get 'cool'  => 'signups#new' 
 

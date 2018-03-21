@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<p>message index</p>
+
+<% @messages.each do |message| %> 
+<div> 
+  <p><%= message.content %></p> 
+  <p><%= message.created_at %></p> 
+
+
+</div> 
+<% end %>
+<%= link_to 'New Message', "messages/new" %>
+
+</body>
+</html>
