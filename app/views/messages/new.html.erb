@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
+		<style>
+.center {
+		text-align: center;
+}
+		</style>
+
 	<title></title>
 </head>
 <body>
-<p>Create new message</p>
-
-<p><%= form_for(@message) do |f| %>  
-  <div> 
+<p>Create New Message</p>
+<div class="center">
+	<p><%= form_for(@message) do |f| %>  
+  	<div> 
     <%= f.label :message %><br> 
-    <%= f.text_area :content %> 
-  </div> 
-  <div> 
+    <%= f.text_area :content, :rows => "15", :cols => "70" %> 
+  	</div> 
+  	<div> 
     <%= f.submit "Create" %> 
-  </div> 
+  	</div>
+ </div> 
 <% end %></p>
+
+
 </body>
 </html>

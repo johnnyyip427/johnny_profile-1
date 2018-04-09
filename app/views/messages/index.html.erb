@@ -2,9 +2,17 @@
 <html>
 <head>
 	<title></title>
+	<style>
+		.right {
+			text-align: right;
+		}
+
+
+	</style>
 </head>
 <body>
-<h1>message index</h1>
+<h1>Talk to Me!!</h1>
+
 
 <% @messages.reverse_each do |message| %> 
 <div> 
@@ -15,8 +23,12 @@
 </div> 
 <% end %>
 
+	<div class="right">
+		<%= link_to 'New Message', "messages/new" %>
+	</div>
 
-<%= link_to 'New Message', "messages/new" %>
+
+	
 
 </body>
 </html>

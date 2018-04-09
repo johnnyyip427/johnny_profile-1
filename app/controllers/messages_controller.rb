@@ -18,11 +18,15 @@ before_action :authorize, :only=>[:new]
 
 	def new
 		@message = Message.new
+		p "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
+		p params
+		p "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
 	end
 
 		def create
 		@message = Message.new(message_params) 
-	  	if @message.save 
+	  	if @message.save
+
 	    	redirect_to '/messages' 
 	  	else 
 	    	render 'new' 
