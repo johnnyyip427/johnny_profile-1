@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
   
 
-  #before_action :authorize, :only=>[:new, :create] 
+  before_action :authorize, :only=>[:new, :create] 
 
   def new
     @user = User.new
