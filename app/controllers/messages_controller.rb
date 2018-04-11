@@ -1,7 +1,7 @@
 class MessagesController < ApplicationController
 
 
-before_action :authorize, :only=>[:new] 
+#before_action :authorize, :only=>[:new] 
 
 
 	def index
