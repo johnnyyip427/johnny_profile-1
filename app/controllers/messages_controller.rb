@@ -7,14 +7,22 @@ before_action :authorize, :only=>[:new]
 	def index
 		@messages = Message.all
 		#@messages = Message.where(id: (current_user.id))
-		# p "========================"
-		#p params
+		p "========================"
+		# p params
+		p "index"
 		#p current_user
 		# p @messages
-		# p "========================"
+		p "========================"
 		# simons work
 		# @messages = Message.where(id:(user.id))
 	end
+
+	# def show
+	# 	# p params
+	# 	# @message = params[:id]
+	# 	# p @message
+	# 	# # redirect_to root_path
+	# end
 
 	def new
 		@message = Message.new
@@ -23,7 +31,7 @@ before_action :authorize, :only=>[:new]
 		p "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
 	end
 
-		def create
+	def create
 		@message = Message.new(message_params) 
 	  	if @message.save
 
@@ -31,6 +39,16 @@ before_action :authorize, :only=>[:new]
 	  	else 
 	    	render 'new' 
 	  	end 
+	end
+
+	def destroy
+		p "========================"
+		p "destroy"
+		p params
+		p "========================"
+		@messages = Message.find(params[:id])
+		@messages.destroy
+		redirect_to messages_path
 	end
 
 	private 

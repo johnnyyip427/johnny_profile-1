@@ -13,11 +13,11 @@ Rails.application.routes.draw do
 		get 'logout' => 'sessions#destroy'
 		
 
-		get 'messages' => 'messages#index'
+		# get 'messages' => 'messages#index'
 
-		get 'messages/new' => 'messages#new'
+		# get 'messages/new' => 'messages#new'
 
-		post 'messages' => 'messages#create'
+		# post 'messages' => 'messages#create'
 
 
   	get 'cool'  => 'signups#new' 
@@ -25,6 +25,8 @@ Rails.application.routes.draw do
 		get 'about'	=> 'signups#about'
 
 		get 'about/show' => 'signups#show'
+
+		resources :messages
 
 
 end
