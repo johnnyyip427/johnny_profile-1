@@ -3,31 +3,49 @@
 <head>
 	<title></title>
 	<style>
-		.right {
-			text-align: right;
+		.center {
+			text-align: center;
 		}
 
-
+		input.MyButton {
+			width: 300px;
+			padding: 20px;
+			cursor: pointer;
+			font-weight: bold;
+			font-size: 150%;
+			background: black;
+			color: darkgray;
+			border: 1px solid orange;
+			border-radius: 10px;
+		}
+		input.MyButton:hover {
+			color: gray;
+			background: #000;
+			border: 3px solid orange;
+		}
 	</style>
+
 </head>
 <body>
-<h1>Read My Updates!!</h1>
+	<h1>Read My Updates!!</h1>
+
+	<% @messages.reverse_each do |message| %> 
+	<div> 
+		<p><%= message.content %></p> 
+		<h6><%= message.created_at %></h6> 
+		<p><%= link_to "Delete", message_path(message.id), :method => :delete %></p>
+	</div> 
+	<% end %>
 
 
-<% @messages.reverse_each do |message| %> 
-<div> 
-  <p><%= message.content %></p> 
-  <h6><%= message.created_at %></h6> 
-
-
-</div> 
-<% end %>
-
-	<div class="right">
+	<!-- <div class="center">
 		<%= link_to 'New Message', "messages/new" %>
-	</div>
+	</div> -->
 
 
+	<form class="center">
+		<input class="MyButton" type="button" value="New Message" onclick="window.location.href='/messages/new'" />
+	</form>
 	
 
 </body>
