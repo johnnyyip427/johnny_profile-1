@@ -2,7 +2,23 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
-h1 {
-		font-size: 100px
-    color: darkblue;
-    text-align: center;
+		.center {
+			text-align: center;
+		}
+
+		input.MyButton {
+			width: 300px;
+			padding: 20px;
+			cursor: pointer;
+			font-weight: bold;
+			font-size: 150%;
+			background: black;
+			color: darkgray;
+			border: 1px solid orange;
+			border-radius: 10px;
+		}
+		input.MyButton:hover {
+			color: gray;
+			background: #000;
+			border: 3px solid orange;
+		}

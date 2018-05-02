@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
 		post 'login' => 'sessions#create'
 
-		get 'logout' => 'sessions#destroy'
+		delete 'logout' => 'sessions#destroy'
 		
 
 		get 'messages' => 'messages#index'
@@ -25,6 +25,8 @@ Rails.application.routes.draw do
 		get 'about'	=> 'signups#about'
 
 		get 'about/show' => 'signups#show'
+
+		resources :messages
 
 
 end
