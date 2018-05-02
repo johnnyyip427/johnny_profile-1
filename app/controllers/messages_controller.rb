@@ -17,18 +17,8 @@ before_action :authorize, :only=>[:new]
 		# @messages = Message.where(id:(user.id))
 	end
 
-	# def show
-	# 	# p params
-	# 	# @message = params[:id]
-	# 	# p @message
-	# 	# # redirect_to root_path
-	# end
-
 	def new
 		@message = Message.new
-		p "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
-		p params
-		p "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
 	end
 
 	def create
@@ -42,19 +32,18 @@ before_action :authorize, :only=>[:new]
 	end
 
 	def destroy
-		p "========================"
-		p "destroy"
-		p params
-		p "========================"
+		if current_user
 		@messages = Message.find(params[:id])
 		@messages.destroy
 		redirect_to messages_path
+	else
+		redirect_to '/login'
+	end
 	end
 
 	private 
   def message_params 
     params.require(:message).permit(:content) 
   end
-
 
 end
