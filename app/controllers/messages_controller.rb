@@ -25,7 +25,8 @@ before_action :authorize, :only=>[:new]
 		@message = Message.new(message_params) 
 	  	if @message.save
 
-	    	redirect_to '/messages' 
+
+	    	redirect_to '/messages'
 	  	else 
 	    	render 'new' 
 	  	end 

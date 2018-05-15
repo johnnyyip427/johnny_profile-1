@@ -5,10 +5,10 @@
 </head>
 <body>
 <p>new user sign up page</p>
-
-<%= form_for(@user) do |f| %>  
+<div>
+<%=form_for(@user) do |f| %>  
   		<div> 
-    		<%= f.label "first name" %><br> 
+    		<p><%= f.label "first name" %></p><br> 
     		<%= f.text_area :first_name %>
   		</div> 
         		<div> 
@@ -27,7 +27,7 @@
     		<%= f.submit "Submit" %> 
   		</div> 
 		<% end %> 
-
+</div>
 
 </body>
 </html>

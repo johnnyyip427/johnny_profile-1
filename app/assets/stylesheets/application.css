@@ -17,77 +17,22 @@
  */
 
   #rcorners2 {
-    display: block;
+    display: inline block;
     margin-left: auto;
     margin-right: auto;
- /*   border-radius: 25px;*/
-    border: 0px solid #73AD21;
+    border-radius: 25px;
+    border: 10px solid white;
     padding: 20px; 
-    width: 100%;
-    height: 230px; 
-  /*  background-color: darkgray;*/
-    background-image: url(johnnyface.jpg);
+    width: 1000px;
+    height: 100px; 
+   
+/*    background-image: url(johnnyface.jpg);*/
 
     /*background-image: url(https://scontent.fsjc1-3.fna.fbcdn.net/v/t31.0-8/18954934_10155197370860977_7307088288831353595_o.jpg?_nc_cat=0&oh=19a6d06a00bb4b493208e309bf978d71&oe=5B685E3E);\*/
     background-position: center;
     position: relative;
-    /*width: 100%;
-*/}
-
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
+    /*width: 100%;*/
 }
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: orange;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover {
-    background-color: #111;
-}
-
-body {
-    background-color: black;
-    /*background-image: url("johnnyface.jpg");*/
-}
-
-h1 {
-    color: orange;
-    text-align: center;
-    text-shadow: -1px 0 darkgreen, 0 1px darkgreen, 1px 0 darkgreen, 0 -1px darkgreen;
-}
-h6 {
-    text-align: center;
-    color: darkgray;
-
-}
-p {
-    font-family: verdana;
-    font-size: 20px;
-    color: orange;
-    text-align: center;
-}
-
-h2 { 
-  font-size: 40px;
-  text-align: center;
-  color: white;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
- }
-
 
 .left {
     text-align: right;
@@ -97,11 +42,68 @@ h2 {
     display: block;
     margin-right: auto;
     margin-left: auto;
+}
 
+ul {
+    list-style-type: none;
+       
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: darkgray;
+    /*position: fixed;*/
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: blue;
+}
+
+body {
+    background: white;
+    background-repeat: no-repeat;
+    /*background-image: url("johnnyface.jpg");*/
 }
 
 h1 {
-        font-size: 100px
-    color: darkblue;
+    color: black;
+    margin-top: 10%;
     text-align: center;
+
+}
+h2 {        
+  font-size: 40px;
+  text-align: center;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+ }
+h6 {
+    text-align: center;
+    color: darkgray
+}
+p {
+    font-family: verdana;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+}
+
+
+
+
+
+
  

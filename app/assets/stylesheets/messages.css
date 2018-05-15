@@ -12,13 +12,13 @@
 			cursor: pointer;
 			font-weight: bold;
 			font-size: 150%;
-			background: black;
-			color: darkgray;
-			border: 1px solid orange;
-			border-radius: 10px;
+			background: gray;
+			color: white;
+			border: 1px solid blue;
+			border-radius: 7px;
 		}
 		input.MyButton:hover {
-			color: gray;
-			background: #000;
-			border: 3px solid orange;
+			color: white;
+			background: blue;
+			border: 2px solid blue;
 		}

@@ -14,7 +14,7 @@
 
   <body>
 
-  <% if current_user %>
+<!--   <% if current_user %>
   <div class="left"> 
        
         <%= current_user.email %><br>
@@ -29,13 +29,14 @@
       <!--  <%= link_to "Home", root_path %>  -->
         
        
-    <% end %>
+    <% end %> -->
+    
   </div> 
     <ul>
       <li><a class="active" href="/">Home</a></li>
       <li><a href="/messages">Messages</a></li>
       <li><a href="/cool">Cool</a></li>
-      <li><a href="/about">About</a></li>
+      <li ><a href="/about">About</a></li>
       <li>
         <% if current_user %>
 
@@ -58,7 +59,7 @@
     </ul>
 
 
-      <span style="cursor:crosshair"><h2 id="rcorners2">Johnnys Blogs</h2></span><br>
+    <!--   <span style="cursor:crosshair"><h2 id="rcorners2">Johnnys Blogs</h2></span><br> -->
 		
 
     <%= yield %>

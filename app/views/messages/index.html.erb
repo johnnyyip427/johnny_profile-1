@@ -10,7 +10,7 @@
 	<div> 
 		<p><%= message.content %></p> 
 		<h6><%= message.created_at %></h6> 
-		<p><%= link_to "Delete", message_path(message.id), :method => :delete %></p>
+		<h6><%= link_to "Delete", message_path(message.id), :method => :delete %></h6>
 	</div> 
 	<% end %>
 
