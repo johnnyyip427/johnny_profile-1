@@ -23,7 +23,21 @@ before_action :authorize, :only=>[:new]
 
 	def create
 		@message = Message.new(message_params) 
-	  	if @message.save
+	  	if @message.save 
+
+
+				# require 'twilio-ruby'
+
+				# account_sid = "PUT SID HERE" # Your Account SID from www.twilio.com/console
+				# auth_token = "PUT TOKEN HERE"   # Your Auth Token from www.twilio.com/console
+
+				# @client = Twilio::REST::Client.new account_sid, auth_token
+				# message = @client.messages.create(
+				#     body: "Hello from Ruby",
+				#     to: "+11234567890",    # Replace with your phone number
+				#     from: "+19164149165")  # Replace with your Twilio number
+
+				# puts message.sid
 
 
 	    	redirect_to '/messages'
