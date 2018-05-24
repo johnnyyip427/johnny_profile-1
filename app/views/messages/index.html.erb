@@ -7,7 +7,7 @@
 	<h1>Read My Updates!!</h1>
 
 	<% @messages.reverse_each do |message| %> 
-	<div> 
+	<div class="border"> 
 		<p><%= message.content %></p> 
 		<h6><%= message.created_at %></h6> 
 		<h6><%= link_to "Delete", message_path(message.id), :method => :delete %></h6>
